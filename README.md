@@ -17,14 +17,17 @@ Injection of the implementations for an interface - the basic tenet of Polymorph
 
 ## Metdadata configuration
 ```
-<bean id = "triangle" class = "me.hawaijar.Triangle">
+<bean id = "shape" class = "me.hawaijar.Triangle">
 </bean>
 ```
 
 Here, we're instructing Spring to instantiate object of the class 'Triangle' when the application asks for a bean with id = 'triangle' in the following code -
 
 ```
-Triangle triangle = (Triangle) factory.getBean("triangle");
+Shape polygon = (Shape) factory.getBean("shape");
 ```
 
 In the above, the application is not creating the object itself. It delegates it to the Spring container (Bean Factory). The **what to be created** is asked by the application, and the **how to be created** is also defined via the **Metadata configuration**. Now, it's up to the Spring container to create the objects (using the metadata) and return to the application. 
+Also, as you can see, the application only depends on the Shape interface. And the kind of shape the application needs, is configured in the Spring's configuration file and Spring (aka BeanFactory) injects during the run time.
+Tomorrow, if want the application to play with another implementation of **Shape**, we just have to update the configuration file and we don't need to change anything in our source code (Main.java).
+ 
