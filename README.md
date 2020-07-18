@@ -10,6 +10,8 @@ The main purpose of Spring framework is twofold - **Inversion of Control** and *
 The former implies that objects are created and managed (lifecycle - init, destroy) by the container on behalf of the main application.
 The later indicates that the container creates an objects graph based on objects and their dependent objects used in the main application. People say object (read 'dependencies') are injected to the dependent objects in the course of running program.
 
+![Spring Container in Action](https://github.com/hawaijar/iamlearningspring/blob/Part1_BeanFactory/1.png)
+
 When we program to interface, we're doing mainly to reduce the hard-dependency between objects. That's the essence of polymorphism - the ability of injecting various implementations of an interface based on requirements/conditions. If I have a Shape interface and there're multiple implementations of it - Triangle, Circle, Rectangle, the main application programs to Shape interface and depending on user's requirement (or similar circumstances), we inject a Triangle or a Circle etc. 
 Injection of the implementations for an interface - the basic tenet of Polymorphism, is done by Spring container. 
 
