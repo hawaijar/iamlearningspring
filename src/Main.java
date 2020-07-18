@@ -6,7 +6,7 @@ import org.springframework.core.io.FileSystemResource;
 public class Main {
     public static void main(String[] args) {
         BeanFactory factory = new XmlBeanFactory(new FileSystemResource("spring.xml"));
-        Triangle triangle = (Triangle) factory.getBean("triangle");
+        Triangle triangle = (Triangle) factory.getBean("shape");
         triangle.draw();
     }
 }
