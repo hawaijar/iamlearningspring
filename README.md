@@ -14,8 +14,8 @@ Choose the zip file and download it (in my case, it's spring-5.2.7.RELEASE-dist.
 
 ```
 - Create a new Java project
-- Click **File** --> Project Structure
-- Click **Dependencies** (right panel) and down there's '+' icon
+- Click File -> Project Structure
+- Click Dependencies (right panel) and down there's '+' icon
 - Click the '+' icon and choose *JAR or directories...' and select all the JAR files from the Spring lib folder
 
 ```
