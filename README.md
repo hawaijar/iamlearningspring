@@ -21,5 +21,7 @@ Choose the zip file and download it (in my case, it's spring-5.2.7.RELEASE-dist.
 ```
 Reference: https://www.jetbrains.com/help/idea/spring-support.html
 
-**Note**: I'm not using a *maven* project because the goal is to focus on the Spring framework and wanted to avoid introducing multiple technology (yeah concept of abstraction: avoid revealing unnecessary details!). However, there's the *pom.xml* file in this branch that you can refer to, if you're familiar (or interested) in building maven project (i.e. you don't want the hassle of following the steps to install Spring framework; rather you want maven to do it for you).
+**Note**: I'm not using a *maven* project because the goal is to focus on the Spring framework and wanted to avoid introducing multiple technology (yeah concept of abstraction: avoid revealing unnecessary details!). 
+
+However, there's a sample *pom.xml* file in this branch that you can refer to, if you're familiar (or interested) in building maven project (i.e. if you don't want the hassle of following the steps to install Spring framework; rather you want maven to do it for you).
 
