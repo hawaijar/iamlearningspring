@@ -29,3 +29,28 @@ public class Triangle extends Shape {
 ```
 We just replaced the word **interface** with **extends**. That's all!
 No other changes. Run the program and you'll get the same result.
+
+Now let's add a property *name* in the Shape interface as shown below -
+``java
+private String name;
+```
+And its getter() and setter() as well -
+```java
+public String getName() {
+    return name;
+}
+```
+```java
+public void setName(String name) {
+    this.name = name;
+}
+```
+
+We wanted the property to be initialized to a concrete value at the time of its instantiation by the Container.
+The way we would be doing is by defining a **property** tag in the configuration file. Take a look below -
+
+```xml
+<bean id = "shape" class = "me.hawaijar.Triangle">
+    <property name="name" value="Triangle"></property>
+</bean>
+```
