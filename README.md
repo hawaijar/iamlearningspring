@@ -117,7 +117,9 @@ The way we have to inform the Container to initialze the color object while init
 
 So, we're telling the container that to initialize the 'name' property of the shape object, you would used the raw value ("Triangle") but to initialize the 'color' property, you would need to first initialize another object of Color first and inject its reference to it.
 
-So, the container will create the dependency object first (the Color object) and then initialize the value of color property of the Shape object to its reference. In short, Spring is wiring up the dependency tree of the objects. This is similiar to what we see in the front-end build process like **Webpack** - We give the entry point (the starting object/module) to the Webpack and Webpack starts digging all its dependencies and build finally a dependecny tree. The only thing that I see different from the Spring container is that Webpack doesn't create/manage the objects - JS module and framework does that. webpack is just creating the dependency graph (of objects), parse all of them and bring out a bundled JS file. That's not what Spring is doing here :-)
+So, the container will create the dependency object first (the Color object) and then initialize the value of color property of the Shape object to its reference. In short, Spring is wiring up the dependency tree of the objects. 
+
+This is similiar to what we see in the front-end build process like **Webpack** - We give the entry point (the starting object/module) to the Webpack and Webpack starts digging all its dependencies and build finally a dependecny tree. The only thing that I see different from the Spring container is that Webpack doesn't create/manage the objects - JS module and framework does that. webpack is just creating the dependency graph (of objects), parse all of them and bring out a bundled JS file. That's not what Spring is doing here :-) and why would it?
 
 
 
