@@ -12,6 +12,7 @@ So, here's our changes -
 
 ```
 Here are changes in Triangle and Circle classes -
+
 ```java
 public class Circle extends Shape{
     @Override
@@ -19,12 +20,13 @@ public class Circle extends Shape{
         System.out.println("Circle drawn");
     }
 }
+```
 ```java
     public class Triangle extends Shape {
         public void draw() {
             System.out.println("Triangle drawn!");
         }
     }
-
+```
 we just replaced the word **interface** with **extends**. That's all.
 No other changes. Run the program and you'll get the same result.
