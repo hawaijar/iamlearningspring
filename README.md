@@ -6,12 +6,11 @@ To do that, let's change our interface *Shape* to an *Abstract class*. Why? Beca
 So, here's our changes -
 
 ```java
-    public abstract class Shape {
-        public abstract void draw();
-    }
+public abstract class Shape {
+    public abstract void draw();
+}
 
 ```
-Here are changes in Triangle and Circle classes -
 
 ```java
 public class Circle extends Shape{
@@ -28,5 +27,5 @@ public class Circle extends Shape{
         }
     }
 ```
-we just replaced the word **interface** with **extends**. That's all.
+We just replaced the word **interface** with **extends**. That's all!
 No other changes. Run the program and you'll get the same result.
