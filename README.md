@@ -56,3 +56,5 @@ The way we would be doing is by defining a **property** tag in the configuration
     <property name="name" value="Triangle"></property>
 </bean>
 ```
+Here, we're helping Spring(container) to initialize the object and also initialize the **name** property  using the setter method. That's why we also created the setter method in the above, otherwise Spring will throw an exception 'cause it can't initialize the property without a setter method. There are two ways Spring initializes properties of an object - 1) **Setter method** 2) **Constructor method**
+
