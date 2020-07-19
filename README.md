@@ -74,3 +74,50 @@ Spring doesn't know any other beyond these two ways. Try removing setter method(
 
 Spring will throw an exception there as it doesn't know how to initialzed/access public property thorugh its object. Let's put that way.
 
+What happen if the property of an object is another object?
+
+Let us try out.
+
+Let's add a new Color object as shown below -
+```java
+public class Color {
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+```
+
+Let's add a color object in our abstract Shape class as shown below -
+```java
++ private Color color;
++ public Color getColor() {
+        return color;
+  }
++ public void setColor(Color color) {
+        this.color = color;
+  }
+```
+
+The way we have to inform the Container to initialze the color object while initializing the Shape object is via a **ref** value. Take a look below -
+```xml
++ <bean id="color" class="me.hawaijar.Color">
++   <property name="name" value="purple"></property>
++ </bean>
+  <bean id = "shape" class = "me.hawaijar.Triangle">
+    <property name="name" value="Triangle"></property>
++   <property name="color" ref="color"></property>
+  </bean>
+```
+
+So, we're telling the container that to initialize the 'name' property of the shape object, you would used the raw value ("Triangle") but to initialize the 'color' property, you would need to first initialize another object of Color first and inject its reference to it.
+
+So, the container will create the dependency object first (the Color object) and then initialize the value of color property of the Shape object to its reference. In short, Spring is wiring up the dependency tree of the objects. This is similiar to what we see in the front-end build process like **Webpack** - We give the entry point (the starting object/module) to the Webpack and Webpack starts digging all its dependencies and build finally a dependecny tree. The only thing that I see different from the Spring container is that Webpack doesn't create/manage the objects - JS module and framework does that. webpack is just creating the dependency graph (of objects), parse all of them and bring out a bundled JS file. That's not what Spring is doing here :-)
+
+
+
