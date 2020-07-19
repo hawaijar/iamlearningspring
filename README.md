@@ -71,5 +71,6 @@ Spring doesn't know any other beyond these two ways. Try removing setter method(
      public abstract void draw();
 ```
 **Note**: In the above, - indicates the line that's removed. + indicates the line that's added (it's the git diff [file] convention)
+
 Spring will throw an exception there as it doesn't know how to initialzed/access public property thorugh its object. Let's put that way.
 
