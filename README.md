@@ -62,9 +62,13 @@ So there are only two ways where the container initialzes object properties (inc
 - Setter method
 - Constructore method
 
-Spring doesn't know any other beyond these two ways. Try removing setter method() and update **private** modifier with **public** modfier like 
-```java
-public String name;
+Spring doesn't know any other beyond these two ways. Try removing setter method() and update **private** modifier with **public** modfier like -
+
+ ```
+ public abstract class Shape {
+  -   private String name;
+  +   public String name;
+     public abstract void draw();
 ```
 Spring will throw an exception there as it doesn't know how to initialzed/access public property thorugh its object. Let's put that way.
 
