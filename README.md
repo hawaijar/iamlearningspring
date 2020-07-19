@@ -56,5 +56,15 @@ The way we would be doing is by defining a **property** tag in the configuration
     <property name="name" value="Triangle"></property>
 </bean>
 ```
-Here, we're helping Spring(container) to initialize the object and also initialize the **name** property  using the setter method. That's why we also created the setter method in the above, otherwise Spring will throw an exception 'cause it can't initialize the property without a setter method. There are two ways Spring initializes properties of an object - 1) **Setter method** 2) **Constructor method**
+Here, we're helping Spring(container) to initialize the object and also initialize the **name** property  using the setter method. That's why we also created the setter method in the above, otherwise Spring will throw an exception 'cause it can't initialize the property without a setter method. There is another way to initialize object properties - **Constructor method**
+
+So there are only two ways where the container initialzes object properties (including references - inner classes) -
+- Setter method
+- Constructore method
+
+Spring doesn't know any other beyond these two ways. Try removing setter method() and update **private** modifier with **public** modfier like 
+```java
+public String name;
+```
+Spring will throw an exception there as it doesn't know how to initialzed/access public property thorugh its object. Let's put that way.
 
