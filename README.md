@@ -31,10 +31,12 @@ We just replaced the word **interface** with **extends**. That's all!
 No other changes. Run the program and you'll get the same result.
 
 Now let's add a property *name* in the Shape interface as shown below -
-``java
+```java
 private String name;
 ```
+
 And its getter() and setter() as well -
+
 ```java
 public String getName() {
     return name;
