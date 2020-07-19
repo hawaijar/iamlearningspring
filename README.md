@@ -21,11 +21,11 @@ public class Circle extends Shape{
 }
 ```
 ```java
-    public class Triangle extends Shape {
-        public void draw() {
-            System.out.println("Triangle drawn!");
-        }
+public class Triangle extends Shape {
+    public void draw() {
+        System.out.println("Triangle drawn!");
     }
+}
 ```
 We just replaced the word **interface** with **extends**. That's all!
 No other changes. Run the program and you'll get the same result.
