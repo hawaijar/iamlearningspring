@@ -1,5 +1,5 @@
 package me.hawaijar;
 
-public interface Shape {
-    public void draw();
+public abstract class Shape {
+    public abstract void draw();
 }

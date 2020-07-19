@@ -1,6 +1,6 @@
 package me.hawaijar;
 
-public class Circle implements Shape{
+public class Circle extends Shape{
     @Override
     public void draw() {
         System.out.println("Circle drawn");
