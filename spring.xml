@@ -5,7 +5,12 @@
        xsi:schemaLocation = "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
+    <bean id="color" class="me.hawaijar.Color">
+        <property name="name" value="purple"></property>
+    </bean>
     <bean id = "shape" class = "me.hawaijar.Triangle">
+        <property name="name" value="Triangle"></property>
+        <property name="color" ref="color"></property>
     </bean>
 
 </beans>

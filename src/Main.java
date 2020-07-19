@@ -7,6 +7,9 @@ public class Main {
     public static void main(String[] args) {
         BeanFactory factory = new XmlBeanFactory(new FileSystemResource("spring.xml"));
         Shape polygon = (Shape) factory.getBean("shape");
+        System.out.println("calling " + polygon.getName());
         polygon.draw();
+        System.out.println("Shape color:" + polygon.getColor().getName());
+
     }
 }
