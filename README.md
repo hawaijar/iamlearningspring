@@ -31,3 +31,7 @@ and here's the corresponding changes in the *spring.xml* configuration file.
 As you can see above, the 'name' property (or member variable) is initialized using the *Setter method* where as the "color" property is initialized using the *constructor* method.
 
 Pretty similar. That's it!
+
+In the next module, we'll start moving into **Application Context** based factory method. *Application Context* based configuration is a superset of plain *Bean factory* method. It adds additonal features on top of the current BeanFactory method.
+
+So, whatever we hvae seen so far, they're well applicable to *Apllication Context* as well. We'll discuss that in detail in the next module.
